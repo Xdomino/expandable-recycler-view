@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * The backing data object for an {@link ExpandableGroup}
  */
-public class ExpandableGroup<T extends ExpandableChild> {
+public class ExpandableGroup<T> {
     private List<T> children;
 
     public ExpandableGroup(List<T> children) {
