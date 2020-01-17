@@ -3,7 +3,9 @@ package com.thoughtbot.expandablerecyclerview.sample;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Artist implements Parcelable {
+import com.thoughtbot.expandablerecyclerview.models.ExpandableChild;
+
+public class Artist implements Parcelable, ExpandableChild {
 
   private String name;
   private boolean isFavorite;

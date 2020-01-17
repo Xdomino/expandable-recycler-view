@@ -34,7 +34,7 @@ public class GenreAdapter extends ExpandableRecyclerViewAdapter<GenreViewHolder,
   public void onBindChildViewHolder(ArtistViewHolder holder, int flatPosition,
       ExpandableGroup group, int childIndex) {
 
-    final Artist artist = ((Genre) group).getItems().get(childIndex);
+    final Artist artist = ((Genre) group).getChildren().get(childIndex);
     holder.setArtistName(artist.getName());
   }
 

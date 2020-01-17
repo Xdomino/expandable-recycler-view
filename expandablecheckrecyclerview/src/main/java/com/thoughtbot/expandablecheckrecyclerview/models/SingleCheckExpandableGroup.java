@@ -22,32 +22,4 @@ public class SingleCheckExpandableGroup extends CheckedExpandableGroup {
       checkChild(childIndex);
     }
   }
-
-  protected SingleCheckExpandableGroup(Parcel in) {
-    super(in);
-  }
-
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    super.writeToParcel(dest, flags);
-  }
-
-  @Override
-  public int describeContents() {
-    return 0;
-  }
-
-  @SuppressWarnings("unused")
-  public static final Creator<SingleCheckExpandableGroup> CREATOR =
-      new Creator<SingleCheckExpandableGroup>() {
-        @Override
-        public SingleCheckExpandableGroup createFromParcel(Parcel in) {
-          return new SingleCheckExpandableGroup(in);
-        }
-
-        @Override
-        public SingleCheckExpandableGroup[] newArray(int size) {
-          return new SingleCheckExpandableGroup[size];
-        }
-      };
 }

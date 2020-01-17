@@ -38,22 +38,6 @@ public abstract class CheckedExpandableGroup extends ExpandableGroup {
     }
   }
 
-  protected CheckedExpandableGroup(Parcel in) {
-    super(in);
-    selectedChildren = in.createBooleanArray();
-  }
-
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    super.writeToParcel(dest, flags);
-    dest.writeBooleanArray(selectedChildren);
-  }
-
-  @Override
-  public int describeContents() {
-    return 0;
-  }
-
   public abstract void onChildClicked(int childIndex, boolean checked);
 
 }

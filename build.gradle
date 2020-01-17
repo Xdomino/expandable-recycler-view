@@ -3,6 +3,10 @@
 buildscript {
   repositories {
     jcenter()
+      maven {
+          url 'https://maven.google.com/'
+          name 'Google'
+      }
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:2.2.3'
@@ -17,7 +21,21 @@ buildscript {
 allprojects {
   repositories {
     jcenter()
+      maven {
+          url 'https://maven.google.com/'
+          name 'Google'
+      }
   }
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")) {
+            def android = project.android
+            android.compileSdkVersion = 28
+            android.buildToolsVersion = "28.0.3"
+        }
+    }
 }
 
 task clean(type: Delete) {
